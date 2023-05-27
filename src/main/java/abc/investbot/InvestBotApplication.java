@@ -9,5 +9,4 @@ public class InvestBotApplication {
     public static void main(String[] args) {
         SpringApplication.run(InvestBotApplication.class, args);
     }
-
 }
