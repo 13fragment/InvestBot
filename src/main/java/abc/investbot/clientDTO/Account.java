@@ -7,7 +7,7 @@ import ru.tinkoff.piapi.core.InvestApi;
 public class Account {
     private InvestApi investApi;
  /** Create setter for sandboxAccount and getter for investApi */
-    public Account(@Value("${app.config.token}") String token,@Value("app.config.sandbox-mode") boolean sandboxMode)
+    public Account(@Value("${app.config.token}") String token,@Value("${app.config.sandbox-mode}") boolean sandboxMode)
     {
         if (token == null || token.isBlank()) {
             throw new IllegalArgumentException("token is not defined");
