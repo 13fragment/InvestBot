@@ -21,4 +21,12 @@ public class SandboxController {
         sandboxService.addMoney(sum);
         return "Баланс был пополнен на "+sum+" RUB";
     }
+    @GetMapping(value ="/orders")
+    public String ordersRequest(){
+        return String.valueOf(sandboxService.orders());
+    }
+    @GetMapping(value ="/orders/{orderId}")
+    public String orderStateRequest(@PathVariable String orderId){
+        return String.valueOf(sandboxService.orderState(orderId));
+    }
 }
