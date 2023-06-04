@@ -7,7 +7,7 @@ import ru.tinkoff.piapi.core.InvestApi;
 public class AccountService {
     private InvestApi investApi;
     private final String accountId;
-    /** Create setter for sandboxAccount and getter for investApi */
+    /** Create setter for sandboxAccount and getter for investApi / accountId */
     public AccountService(@Value("${app.config.token}") String token, @Value("${app.config.sandbox-mode}") boolean sandboxMode, @Value("${app.config.account-id}") String accountId)
     {
         this.accountId = accountId;
