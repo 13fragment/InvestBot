@@ -16,7 +16,7 @@ public class SandboxService {
         this.accountService = accountService;
     }
     public String getPortfolio(){
-        log.info("Сведения о портфолио: ");
+        log.info("Получена информация о портфеле: ");
         return String.valueOf(accountService.getInvestApi().getSandboxService().getPortfolioSync(accountService.getAccountId()));
     }
     public CompletableFuture<MoneyValue> addMoney(long sum){
