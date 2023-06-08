@@ -22,4 +22,10 @@ public class OrderService {
                 UUID.randomUUID().toString()).getOrderId();
         log.info("выставлена заявка с id: {}", orderId);
     }
+    public void sellMarket(String figi, long quantity) {
+        var accountId = accountService.getAccountId();
+        var orderId = accountService.getInvestApi().getSandboxService().postOrderSync(figi, quantity, Quotation.getDefaultInstance(), OrderDirection.ORDER_DIRECTION_SELL, accountId, OrderType.ORDER_TYPE_MARKET,
+                UUID.randomUUID().toString()).getOrderId();
+        log.info("продана заявка с id: {}", orderId);
+    }
 }
