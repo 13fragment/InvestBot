@@ -5,14 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import ru.tinkoff.piapi.contract.v1.*;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 
 @Service
 public class OrderService {
     private static final Logger log = LoggerFactory.getLogger(SandboxService.class);
-    private final Map<String, String> figi = new HashMap<String, String>();
     private final AccountService accountService;
 
     public OrderService(AccountService accountService) {

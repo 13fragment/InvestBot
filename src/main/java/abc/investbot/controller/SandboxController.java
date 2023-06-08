@@ -15,16 +15,10 @@ public class SandboxController {
     private final SandboxService sandboxService;
     private final OrderService orderService;
 
-    @Value("${app.trading.quantity}")
-    private long quantity;
-
-    @Value("${app.trading.figi.SBER}")
-    private String figi;
-
-    public SandboxController(SandboxService sandboxService, OrderService orderService) {
+    public SandboxController(SandboxService sandboxService, OrderService orderService, @Value("${app.trading.figi.SBER}") String figi, @Value("${app.trading.quantity}") long quantity) {
         this.sandboxService = sandboxService;
         this.orderService = orderService;
-        orderService.buyMarket("BBG004730N88", 1);
+        orderService.buyMarket(figi, quantity);
     }
 
     @GetMapping(value = "/portfolio")
