@@ -19,7 +19,7 @@ public class SandboxController {
         this.sandboxService = sandboxService;
         this.orderService = orderService;
         orderService.buyMarket(figi, quantity);
-        //orderService.sellMarket(figi, quantity);
+        orderService.sellMarket(figi, quantity);
     }
 
     @GetMapping(value = "/portfolio")
