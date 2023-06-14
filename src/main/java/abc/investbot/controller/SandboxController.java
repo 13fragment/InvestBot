@@ -35,7 +35,7 @@ public class SandboxController {
 
     @GetMapping(value = "/orders")
     public String ordersRequest() {
-        return String.valueOf(sandboxService.orders());
+        return String.valueOf(orderService.ordersRequest());
     }
 
     @GetMapping(value = "/orders/{orderId}")
