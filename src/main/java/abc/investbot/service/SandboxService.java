@@ -17,18 +17,22 @@ public class SandboxService {
     public SandboxService(AccountService accountService) {
         this.accountService = accountService;
     }
-    public PortfolioResponse getPortfolio(){
+
+    public PortfolioResponse getPortfolio() {
         log.info("Получена информация о портфеле: ");
         return accountService.getInvestApi().getSandboxService().getPortfolioSync(accountService.getAccountId());
     }
-    public void addMoney(long sum){
-        log.info("Портфель был пополнен на "+sum+" RUB");
+
+    public void addMoney(long sum) {
+        log.info("Портфель был пополнен на " + sum + " RUB");
         accountService.getInvestApi().getSandboxService().payInSync(accountService.getAccountId(), MoneyValue.newBuilder().setUnits(sum).setCurrency("RUB").build());
     }
-    public List<OrderState> orders(){
+
+    public List<OrderState> orders() {
         return accountService.getInvestApi().getSandboxService().getOrdersSync(accountService.getAccountId());
     }
-    public OrderState orderState(String orderId){
+
+    public OrderState orderState(String orderId) {
         return accountService.getInvestApi().getSandboxService().getOrderStateSync(accountService.getAccountId(), orderId);
     }
 }
