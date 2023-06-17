@@ -78,11 +78,11 @@ RSI = 100 — 100 / (1 + Upeman/Downeman)
       "BBG000QJW156", //BSPB
       "BBG00475KKY8" //NVTK
     ],
-    "upperRsiThreshold": 70, 
-    "lowerRsiThreshold": 30,
-    "takeProfit": 0.15,
-    "stopLoss": 0.05,
-    "rsiPeriod": 14
+    "upperRsiThreshold": 70, //default
+    "lowerRsiThreshold": 30, //default
+    "takeProfit": 0.15, //default
+    "stopLoss": 0.05, //default
+    "rsiPeriod": 14 //default
   }
 ]
 ```
