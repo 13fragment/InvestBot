@@ -2,9 +2,9 @@
 ![LividSelfassuredFairybluebird-size_restricted](https://github.com/13fragment/InvestBot/assets/74821169/1883f2c6-bf4d-4196-8147-ac06519b730f)
 <h4>InvestBot - торговый робот, реализующий <b>gRPC</b> интерфейс для взаимодействия с торговой платформой <a href="https://www.tinkoff.ru/invest/">Тинькофф инвестиций</a>, путем <a href="https://github.com/Tinkoff/investAPI/ ">API</a>.</h3>
 
-# Пререквизиты
+## Пререквизиты
 * Java версии не ниже 11
-* Для запуска бота нужно быть клиентом Тинькофф Инвестиций
+* Быть клиентом Тинькофф Инвестиций
 
 ***
 ## Описание стратегии
