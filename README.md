@@ -72,13 +72,13 @@ RSI = 100 — 100 / (1 + Upeman/Downeman)
 [
   {
     "figi": [
-      "BBG004TC84Z8",
-      "BBG004730ZJ9",
-      "BBG004731354",
-      "BBG000QJW156",
-      "BBG00475KKY8"
+      "BBG004TC84Z8", //SBER
+      "BBG004730ZJ9", //VTBR
+      "BBG004731354", //ROSN
+      "BBG000QJW156", //BSPB
+      "BBG00475KKY8" //NVTK
     ],
-    "upperRsiThreshold": 70,
+    "upperRsiThreshold": 70, 
     "lowerRsiThreshold": 30,
     "takeProfit": 0.15,
     "stopLoss": 0.05,
