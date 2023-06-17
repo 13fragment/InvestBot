@@ -1,6 +1,7 @@
 # InvestBot
-![11811e70b028f6b63e4862891541ddbb_cropped_478x200.gif](..%2F..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2F11811e70b028f6b63e4862891541ddbb_cropped_478x200.gif)
+![11811e70b028f6b63e4862891541ddbb_cropped_478x200](https://github.com/13fragment/InvestBot/assets/74821169/c163c057-4da2-4d77-b79d-f735297796df)
 <h4>InvestBot - торговый робот, реализующий <b>gRPC</b> интерфейс для взаимодействия с торговой платформой <a href="https://www.tinkoff.ru/invest/">Тинькофф инвестиций</a>, путем <a href="https://github.com/Tinkoff/investAPI/ ">API</a>.</h3>
+
 # Пререквизиты
 * Java версии не ниже 11
 * Для запуска бота нужно быть клиентом Тинькофф Инвестиций
