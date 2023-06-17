@@ -17,7 +17,7 @@ public class RSICache {
     private final Map<String, Map<Integer, BigDecimal>> cache = new HashMap<>();
 
     public Map<String, Map<Integer, BigDecimal>> getCache() {
-        return this.cache;
+        return cache;
     }
 
     public void calculateRSI(String figi, Map<String, TreeSet<CachedCandle>> candlesCache, RSIStrategyConfig config) {
@@ -71,7 +71,6 @@ public class RSICache {
                 .subtract(
                         BigDecimal.valueOf(100).divide(BigDecimal.ONE.add(rs), RoundingMode.DOWN)
                 );
-//        log.info("figi: {}. {} candles RSI: {}", figi, limit, rsi);
 
         if (!cache.containsKey(figi)) {
             cache.put(figi, new HashMap<>());

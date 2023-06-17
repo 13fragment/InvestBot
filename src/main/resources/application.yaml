@@ -3,8 +3,4 @@ app:
     token: ${TOKEN:t.43M1YGrSecmJYP80pK3Ve0btXZuuKRNul5pwF7HLCCKv4fz-zpE_WPn1ABstEk6-RUu39qNTi4ihTCdMyBjFFw}
     sandbox-mode: ${SANDBOX:true}
     account-id: ${ACCOUNT_ID:78ce85df-2883-4043-a605-6980b0f71c92}
-  trading:
-    quantity: ${QUANTITY:10}
-    figi:
-      SBER: ${SBER:BBG004730N88}
 

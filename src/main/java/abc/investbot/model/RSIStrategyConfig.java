@@ -16,27 +16,26 @@ public class RSIStrategyConfig {
     private int rsiPeriod = 14;
 
     public List<String> getFigi() {
-        return this.figi;
+        return figi;
     }
 
     public int getRsiPeriod() {
-        return this.rsiPeriod;
+        return rsiPeriod;
     }
 
     public BigDecimal getLowerRsiThreshold() {
-        return this.lowerRsiThreshold;
+        return lowerRsiThreshold;
     }
 
     public BigDecimal getUpperRsiThreshold() {
-        return this.upperRsiThreshold;
+        return upperRsiThreshold;
     }
 
     public BigDecimal getTakeProfit() {
-        return this.takeProfit;
+        return takeProfit;
     }
 
     public BigDecimal getStopLoss() {
-        return this.stopLoss;
+        return stopLoss;
     }
-
 }

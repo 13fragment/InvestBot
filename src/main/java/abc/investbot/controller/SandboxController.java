@@ -4,7 +4,6 @@ import abc.investbot.model.RSIStrategyConfig;
 import abc.investbot.service.SandboxService;
 import abc.investbot.service.OrderService;
 import abc.investbot.starategy.CandelHistory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,11 +16,9 @@ public class SandboxController {
     private final OrderService orderService;
     private final CandelHistory candelHistory;
 
-    public SandboxController(SandboxService sandboxService, OrderService orderService, @Value("${app.trading.figi.SBER}") String figi, @Value("${app.trading.quantity}") long quantity, CandelHistory candelHistory) {
+    public SandboxController(SandboxService sandboxService, OrderService orderService, CandelHistory candelHistory) {
         this.sandboxService = sandboxService;
         this.orderService = orderService;
-        //orderService.buyMarket(figi, quantity);
-        //orderService.sellMarket(figi, quantity);
         this.candelHistory = candelHistory;
     }
 
@@ -45,9 +42,7 @@ public class SandboxController {
     public String orderStateRequest(@PathVariable String orderId) {
         return String.valueOf(sandboxService.orderState(orderId));
     }
-
-    // загадка жака фреско на GetMapping и PostMapping
-    @PostMapping("/rsi") // или @GetMapping("/rsi")
+    @PostMapping("strategies/rsi")
     public List<RSIStrategyConfig> start(@RequestBody List<RSIStrategyConfig> configs) throws InterruptedException {
         candelHistory.initCache(configs);
         return configs;

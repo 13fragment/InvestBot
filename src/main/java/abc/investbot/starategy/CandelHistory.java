@@ -102,8 +102,6 @@ public class CandelHistory {
         StreamProcessor<MarketDataResponse> processor = response -> {
             if (response.hasCandle()) {
                 var figi = response.getCandle().getFigi();
-//                log.info("new candles data for figi {}", figi);
-
                 var lot = instrumentsHistory.getLot(figi);
                 var candle = CachedCandle.ofStreamCandle(response.getCandle(), lot);
                 cache.get(figi).add(candle);
@@ -126,8 +124,6 @@ public class CandelHistory {
             }
         };
         var marketDataStreamService = accountService.getInvestApi().getMarketDataStreamService();
-
-        //todo. Придумать способ, как открывать следующий стрим, если инструментов больше 300
         var streamName = "default stream id";
         var stream = marketDataStreamService.getStreamById(streamName);
         if (stream == null) {

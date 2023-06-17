@@ -17,7 +17,6 @@ public class InstrumentsHistory {
     public InstrumentsHistory(AccountService accountService) {
         this.accountService = accountService;
     }
-
     public void add(String figi) {
         var instrument = accountService.getInvestApi().getInstrumentsService().getInstrumentByFigiSync(figi);
         instruments.put(figi, instrument);

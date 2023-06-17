@@ -28,10 +28,10 @@ public class CachedCandle {
     }
 
     public Timestamp getTimestamp() {
-        return this.timestamp;
+        return timestamp;
     }
 
     public BigDecimal getClosePrice() {
-        return this.closePrice;
+        return closePrice;
     }
 }

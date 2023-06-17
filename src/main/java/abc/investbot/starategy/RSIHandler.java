@@ -150,5 +150,4 @@ public class RSIHandler {
         log.info("closing long. figi: {}, open price: {}, close price: {}, profit: {}, reason: {}", figi, openPrice, closePrice, profit, reason);
         orderService.sellMarketLong(figi);
     }
-
 }

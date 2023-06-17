@@ -12,15 +12,21 @@ import java.util.Map;
 @Service
 public class OrdersHistory {
     private final Map<String, CachedOrder> cache = new HashMap<>();
+    private CachedOrder getCachedOrder(String figi) {
+        var cachedOrder = cache.get(figi);
+        if (cachedOrder == null) {
+            cachedOrder = new CachedOrder();
+            cache.put(figi, cachedOrder);
+        }
+        return cachedOrder;
+    }
 
-    //цена * лот
     public void setPrice(String figi, MoneyValue openPrice) {
         getCachedOrder(figi).setOpenPrice(MapperUtils.moneyValueToBigDecimal(openPrice));
     }
 
-    //цена * лот
     public BigDecimal getPrice(String figi) {
-        return cache.get(figi).getOpenPrice();
+        return getCachedOrder(figi).getOpenPrice();
     }
 
     public boolean shortOpen(String figi) {
@@ -37,14 +43,5 @@ public class OrdersHistory {
 
     public void setShort(String figi, boolean value) {
         getCachedOrder(figi).setShortOpen(value);
-    }
-
-    private CachedOrder getCachedOrder(String figi) {
-        var cachedOrder = cache.get(figi);
-        if (cachedOrder == null) {
-            cachedOrder = new CachedOrder();
-            cache.put(figi, cachedOrder);
-        }
-        return cachedOrder;
     }
 }

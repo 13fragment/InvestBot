@@ -6,15 +6,13 @@ public class CachedOrder {
 
     private boolean shortOpen = false;
     private boolean longOpen = false;
-    //цена * лот
     private BigDecimal openPrice = BigDecimal.TEN;
-
-    public BigDecimal getOpenPrice() {
-        return this.openPrice;
-    }
 
     public void setOpenPrice(BigDecimal openPrice) {
         this.openPrice = openPrice;
+    }
+    public BigDecimal getOpenPrice() {
+        return openPrice;
     }
 
     public void setLongOpen(boolean longOpen) {
